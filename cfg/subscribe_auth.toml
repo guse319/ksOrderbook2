@@ -1,0 +1,4 @@
+URL = "wss://api.elections.kalshi.com"
+PATH = "/trade-api/ws/v2"
+API_KEY = ""
+SIGN_KEY_PATH = ""

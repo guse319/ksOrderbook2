@@ -1,0 +1,6 @@
+subscriber
+*.o
+core/*.o
+logs/*
+CLAUDE1.md
+cfg/subscribe_auth copy.toml
