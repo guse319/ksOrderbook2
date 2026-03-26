@@ -31,6 +31,7 @@ void Orderbook::publishDeltaToShm(Price price, Quantity quantity, YesNo yesno) {
     d.bids[price].quantity += quantity;
     o.asks[100 - price].quantity += quantity;
 
+    // Debugging print - remove in prod
     std::cout << "Published delta to SHM: " << (yesno == YesNo::YES ? "YES" : "NO") << " price=" << price << " quantity=" << d.bids[price].quantity << std::endl;
 
     d.bids[price].seq.fetch_add(1, std::memory_order_acq_rel); // unlock
