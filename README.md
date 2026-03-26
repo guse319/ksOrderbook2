@@ -1,6 +1,6 @@
 # Kalshi Subscriber
 
-A C++17 WebSocket client that streams real-time orderbook data from the Kalshi prediction markets exchange. It connects over TLS, authenticates using RSA-PSS signed request headers, and maintains a live in-memory orderbook for each subscribed market — processing both full snapshots and incremental delta updates as they arrive.
+A C++20 WebSocket client that streams real-time orderbook data from the Kalshi prediction markets exchange. It connects over TLS, authenticates using RSA-PSS signed request headers, and maintains a live in-memory orderbook for each subscribed market — processing both full snapshots and incremental delta updates as they arrive.
 
 Market data is written to a POSIX shared memory segment using a seqlock scheme, so that separate strategy processes can read current orderbook state with minimal latency and no copying overhead. Each market's full message stream is also persisted to a replay log for backtesting.
 
